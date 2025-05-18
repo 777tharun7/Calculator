@@ -1,45 +1,77 @@
+/* Background and Font */
 body {
-    background: linear-gradient(to right, #536976, #292e49);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .calculator {
-    background-color: #d1d1d1;
-    width: 350px;
-  }
-  
-  .button-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
-    padding: 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #e0e0e0;
-    transition: 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #b0c4de;
-  }
-  
-  .operator {
-    background-color: #008b8b;
-  }
-  
-  .operator:hover {
-    background-color: #20b2aa;
-  }
-  
-  .equal {
-    background-color: #001f3f;
-    color: white;
-  }
-  
-  .equal:hover {
-    background-color: #004080;
-  }
+  background: linear-gradient(to right, #283c86, #45a247);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Calculator Container */
+.calculator {
+  background-color: #f4f4f4;
+  width: 360px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Grid Layout */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Common Button Style */
+button {
+  padding: 18px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dfe9f3;
+  transform: translateY(-2px);
+}
+
+/* Operator Buttons */
+.operator {
+  background-color: #0f4c75;
+  color: #fff;
+}
+
+.operator:hover {
+  background-color: #3282b8;
+}
+
+/* Equal Button */
+.equal {
+  background-color: #1b262c;
+  color: #ffffff;
+  grid-column: span 2;
+  font-weight: bold;
+}
+
+.equal:hover {
+  background-color: #0f1e25;
+}
+
+/* Optional: Clear or Special Buttons */
+.special {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.special:hover {
+  background-color: #ee5253;
+}
